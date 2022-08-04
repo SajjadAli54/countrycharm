@@ -7,12 +7,42 @@
     src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
 }
 
-.myHeader {
-    font-family: 'SEGA LOGO FONT';
-    font-weight: 200;
-    color: #0ccac4;
+.nav-styling {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+
+}
+.nav_band{
+    margin-right: 450px;
+    color: white;
+}
+.nav_link{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: larger;
+    margin-right: 50px;
 }
 
-div{
-    background: linear-gradient(to left, rgba(7, 27, 82, 1) 0%, rgba(0, 128, 128, 1) 100% );
+
+.nav_link:hover{
+    border-bottom: 2px solid rgb(218, 218, 218);
+    color: rgb(218, 218, 218);
+    font-size: 20px;
+}
+
+.features_link{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(223, 223, 223);
+    font-size: larger;
+    margin-right: 40px;
+    border-radius: 10px;
+    
+}
+
+.features_link:hover{
+
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(0, 170, 255);
+
 }

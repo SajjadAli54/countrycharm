@@ -4,7 +4,6 @@ import PostsList from '../components/post/PostsList';
 import ErrorBoundry from '../components/ErrorBoundry'
 import './App.css';
 import { Component } from 'react';
-
 class App extends Component {
   render() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './Button'
+import Button from '@mui/material/Button';
 import Dropdown from './Dropdown'
 
 const SearchBox = () => {
@@ -11,7 +11,8 @@ const SearchBox = () => {
                 type='search'
                 placeholder='Search'
             ></input>
-            <Button text='Search' />
+            <Button variant="contained">Search</Button>
+
         </div>
     )
 }

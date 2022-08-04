@@ -1,14 +1,14 @@
 import React from 'react'
+import Button from './Button'
+import Dropdown from './Dropdown'
+import TextField from './TextField'
 
-const SearchBox = ({ searchField, searchChange }) => {
+const SearchBox = () => {
     return (
-        <div className='pa2'>
-            <input
-                className='pa3 ba b--green bg-lightest-blue'
-                type='search'
-                placeholder='Search Post'
-                onChange={searchChange}
-            ></input>
+        <div className='pa2 ba dib'>
+            <Dropdown />
+            <TextField type='search' placeholder='Search Post' />
+            <Button text='Search' />
         </div>
     )
 }

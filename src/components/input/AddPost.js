@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '@mui/material/Button';
+import Button from './Button'
 import Dropdown from './Dropdown'
 
 function AddPost() {
@@ -8,7 +8,7 @@ function AddPost() {
             <Dropdown />
             <textarea className='pa3 ba b--green bg-lightest-blue' rows='3'>
             </textarea>
-            <Button variant="contained">Post</Button>
+            <Button text='Post' />
         </div>
     )
 }

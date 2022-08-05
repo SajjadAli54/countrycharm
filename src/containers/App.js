@@ -1,7 +1,8 @@
 import './App.css';
+import { Component } from 'react';
 import Header from '../components/header/Header';
 
-class App extends Compomemt {
+class App extends Component {
   constructor(props) {
     super(props)
 

@@ -20,14 +20,14 @@ function Header() {
           >
             <Nav.Link className='nav_link' href="#action1">Home</Nav.Link>
             <Nav.Link className='nav_link' href="#action2">Food</Nav.Link>
-            
-            <Nav.Link className='nav_link' href="#" >Hotel</Nav.Link>
-            <Nav.Link className='nav_link' style={{marginRight: '220px'}} href="#" >Places</Nav.Link>
+
+            <Nav.Link className='nav_link' href="#action3" >Hotel</Nav.Link>
+            <Nav.Link className='nav_link' style={{ marginRight: '220px' }} href="#action4" >Places</Nav.Link>
 
             {/*these two are the links for add a post and search a post i have given the classname as features
             because these two are the features of review site*/}
-            <Nav.Link className='features_link' href="#" >Add a Post</Nav.Link>
-            <Nav.Link className='features_link' href="#" >Search a Post</Nav.Link>
+            <Nav.Link className='features_link' href="#action5" >Add a Post</Nav.Link>
+            <Nav.Link className='features_link' href="#action6" >Search a Post</Nav.Link>
 
 
           </Nav>

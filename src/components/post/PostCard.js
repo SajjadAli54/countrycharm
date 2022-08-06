@@ -1,21 +1,23 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
+import './post.css'
 
 
 function PostCard(props) {
   return (
-    <Card style={{ width: '18rem' ,backgroundColor:'#F5F5DA'}}>
-        
+    <Card style={{height: '35rem', width: '20rem' ,backgroundColor:'#F5F5DA'}}>
+        <span className='badge'>9</span>
+       
       <Card.Body>
         <img src={props.url_img}></img>
-        <h5>{props.cardname}</h5>
-                 <Card.Text>
+        <h5 style={{marginTop:'1rem',fontSize:'2rem',textAlign:'center'}}>{props.cardname}</h5>
+        <Card.Text style={{height:'10rem'}}>
            Some quick example text to build on the card title and make up the
            bulk of the card's content.
          </Card.Text> 
-        <Card.Link href="#">Read More</Card.Link>
+        <Card.Link  href="#"><hr></hr>Read More</Card.Link>
         
       </Card.Body>
     </Card>

@@ -1,0 +1,29 @@
+.scrollable_div {
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    margin-top: 4rem;
+    /* overflow: auto;
+  
+    text-align: justify; */
+  
+    
+  }
+
+  .row_style{
+    margin: 0 auto;
+    height: 40rem;
+  }
+
+  .badge{
+    width: 10%;
+    height: 6%;
+    padding-top: 10px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    border-radius: 100%;
+    background-color: rgb(28, 28, 25);
+    border: 1px solid whitesmoke;
+
+  }

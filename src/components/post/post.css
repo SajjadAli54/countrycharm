@@ -1,5 +1,5 @@
 .scrollable_div {
-    background-color: aquamarine;
+   
     height: 100%;
     width: 100%;
     margin-top: 4rem;
@@ -11,8 +11,10 @@
   }
 
   .row_style{
-    margin: 0 auto;
+    
     height: 40rem;
+    background-color: brown;
+    padding-left: 4%;
   }
 
   .badge{

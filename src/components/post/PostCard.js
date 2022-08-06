@@ -7,8 +7,8 @@ import './post.css'
 
 function PostCard(props) {
   return (
-    <Card style={{height: '35rem', width: '20rem' ,backgroundColor:'#F5F5DA'}}>
-        <span className='badge'>9</span>
+    <Card style={{height: '35rem', width: '20rem' ,backgroundColor:'#F5F5DA', marginTop: '1rem', marginTop: '1rem'}}>
+        <span className='badge'>{props.postNum}</span>
        
       <Card.Body>
         <img src={props.url_img}></img>

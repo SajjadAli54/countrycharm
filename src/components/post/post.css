@@ -13,10 +13,32 @@
   .row_style{
     
     height: 40rem;
-    background-color: brown;
+   
     padding-left: 4%;
+
   }
 
+  @media screen and (max-width: 900px) {
+    
+  .row_style{
+    
+    height: 80rem;
+    
+    padding-left: 4%;
+
+  }
+  }
+
+  @media screen and (max-width: 400px) {
+    
+    .row_style{
+      
+      height: 160rem;
+      
+      padding-left: 4%;
+  
+    }
+    }
   .badge{
     width: 10%;
     height: 6%;

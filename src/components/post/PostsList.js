@@ -25,40 +25,40 @@ function PostsList() {
           </Col>
         
 
-        {/* </Row>
+        </Row>
         <Row className="row_style">
-        <Col>
+        <Col md={6} lg="auto">
               <PostCard postNum="5" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="6" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="7" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="8" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
         
 
         </Row >
 
-        <Row className="row_style">
-        <Col>
+        {/* <Row className="row_style">
+        <Col md={6} lg="auto">
               <PostCard postNum="9" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="10" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="11" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
-          <Col>
+          <Col md={6} lg="auto">
               <PostCard postNum="12" cardname="Title will be here" cardDescrip={description} url_img="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"/>
           </Col>
         
- */}
-        </Row> 
+
+        </Row>  */}
 
       </Container>
        

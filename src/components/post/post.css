@@ -51,3 +51,55 @@
     border: 1px solid whitesmoke;
 
   }
+  /* Complete post styling starts from here */
+
+  .container{
+    height: 42rem;
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+    overflow: auto;
+    text-align: justify;
+  
+  }
+
+    .header{
+      height: 40%;
+      width: 100%;
+      
+    }
+
+    
+  .start_head {
+    height: 10%;
+    width: 100%;
+    
+   
+  }
+  .image_content {
+    height: 80%;
+    width: 40%; 
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+
+  .body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+  
+  }
+
+  .body p{
+    text-align: justify;
+  
+  }
+  .body h3{
+    text-align: center;
+    margin-top: 20px;
+    font-weight:800;
+   
+
+  }
+ 
+

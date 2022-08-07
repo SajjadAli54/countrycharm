@@ -8,11 +8,13 @@ function CompletePost() {
           <span className='category'>Category: Like Places</span>
           <span className='close_icon'>X</span>
         </div>
+        <hr></hr>
         <div className="image_content">
          
           <img src="https://www.planetware.com/wpimages/2020/02/italy-in-pictures-beautiful-places-to-photograph-venice-canal.jpg"  />
        </div>
       </div>
+      
       <div className="body">
           <h3>Heading will be here</h3>
           <p>
@@ -27,9 +29,10 @@ The book is comprised of 5 chapters. Each chapter is full of some regrets, disap
 
           </p>
       </div>
-      <div style={{backgroundColor: 'rgb(49, 147, 237)', color: 'white', borderRadius: '10px 10px 10px 10px', fontWeight:'bolder',paddingLeft:'20px'}}>
-        <span>Name of the Author</span>
-        <span>Email of the author</span>
+      <hr></hr>
+      <div style={{ color: 'Orange',  fontWeight:'bolder',paddingLeft:'20px', textAlign: 'center' }}>
+        <span style={{display: 'inline-block', width:'50%',paddingBottom:'1rem'}}>Author: Hadsaw Kakazai</span>
+        <span style={{display: 'inline-block', width:'50%',paddingBottom:'1rem'}}>Email: hadsawkakazaihk@gmail.com</span>
         
       </div>
     </div>

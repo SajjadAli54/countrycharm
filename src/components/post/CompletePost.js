@@ -5,8 +5,8 @@ function CompletePost() {
     <div className='container'>
       <div className="header">
         <div className='start_head'>
-          <span>Category: Like Places</span>
-          <span>X</span>
+          <span className='category'>Category: Like Places</span>
+          <span className='close_icon'>X</span>
         </div>
         <div className="image_content">
          

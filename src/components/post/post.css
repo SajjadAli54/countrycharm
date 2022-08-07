@@ -58,22 +58,29 @@
     width: 60%;
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
-    overflow: auto;
+    overflow: hidden;
     text-align: justify;
-  
+    border-radius: 20px;
+    box-shadow: -2px 3px 10px -3px rgba(0,0,0,0.49);
+    -webkit-box-shadow: -2px 3px 10px -3px rgba(0,0,0,0.49);
+    -moz-box-shadow: -2px 3px 10px -3px rgba(0,0,0,0.49);
+    margin-top: 1rem;
   }
 
+  .container:hover{
+    overflow: auto;
+  }
     .header{
       height: 40%;
       width: 100%;
-      
+     
     }
 
     
   .start_head {
     height: 10%;
     width: 100%;
-    
+    margin-top: 1rem;
    
   }
   .image_content {
@@ -98,8 +105,57 @@
     text-align: center;
     margin-top: 20px;
     font-weight:800;
+    position: sticky;
+    top: 0px;
+    background-color:rgb(240, 240, 240)
    
 
   }
  
+  .close_icon{
+    height: 100%;
+    width: 3%;
+    background-color: rgb(183, 9, 0);
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    color: white;
 
+  }
+  .close_icon:hover{
+    background-color: rgb(177, 173, 173);
+    color: rgb(183, 9, 0);
+    cursor: pointer;
+
+  }
+  
+  .category{
+    height: 100%;
+    width: 95%;
+    display: inline-block;
+    color: #8d8d8d;
+    font-weight: lighter;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(164, 164, 164); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0084ff; 
+  }

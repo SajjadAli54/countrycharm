@@ -19,6 +19,18 @@ function PostCard({ post }) {
     // setIsShown(true);
   };
 
+  let img, cat = post.category;
+  switch (cat) {
+    case 'Food':
+      img = `https://foodish-api.herokuapp.com/images/dosa/dosa${post.id}.jpg`
+      break;
+    case 'Place':
+      img = `https://picsum.photos/200/300`
+      break;
+    case 'Hotel':
+      img = `http://photos.hotelbeds.com/giata/00/004200/004200a_hb_ro_00${post.id}.jpg`
+
+  }
   if (isShown)
     return (
       <Card
@@ -35,7 +47,7 @@ function PostCard({ post }) {
 
         <Card.Body>
           <img
-            src={`https://robohash.org/${post.id}?20x20`}
+            src={img}
             width='100px'
             height={'100px'}
             alt='Post'></img>

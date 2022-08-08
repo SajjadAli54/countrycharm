@@ -1,6 +1,5 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import './post.css'
 

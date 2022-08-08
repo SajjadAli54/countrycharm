@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CompletePost from './CompletePost';
+import SearchPost from './SearchPost';
 
 function PostsList() {
     let description ="Some quick example text to build on the card title and make up thebulk of the card's content."
@@ -63,8 +64,10 @@ function PostsList() {
 
     //   </Container>
        
-    <CompletePost/>
-    )
+    <></>
+    
+
+     )
 }
 
 export default PostsList

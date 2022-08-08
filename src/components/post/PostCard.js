@@ -31,7 +31,7 @@ function PostCard({ post }) {
           marginTop: '1rem'
         }}>
         <span
-          className='badge'>{post.id}</span>
+          className='badge'>{`${post.category}`}</span>
 
         <Card.Body>
           <img
@@ -39,7 +39,9 @@ function PostCard({ post }) {
             width='100px'
             height={'100px'}
             alt='Post'></img>
-          <h5 style={{ marginTop: '1rem', fontSize: '2rem', textAlign: 'center' }}>{post.title}</h5>
+          <h5 style={{ marginTop: '1rem', fontSize: '2rem', textAlign: 'center' }}>
+            {post.title}
+          </h5>
           <Card.Text style={{ height: '10rem' }}>
             {post.body.substring(0, 200)}
           </Card.Text>

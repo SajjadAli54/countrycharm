@@ -21,7 +21,7 @@ function CompletePost({ post, onClose }) {
         </p>
       </div>
       <div style={{ backgroundColor: 'rgb(49, 147, 237)', color: 'white', borderRadius: '10px 10px 10px 10px', fontWeight: 'bolder', paddingLeft: '20px' }}>
-        <span>Author: {post.author}</span>
+        <span>Author: {post.name}</span>
         <span>Email: {post.email}</span>
 
       </div>

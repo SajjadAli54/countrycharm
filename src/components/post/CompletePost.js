@@ -15,7 +15,7 @@ function CompletePost({ post, onClose }) {
         </div>
       </div>
       <div className="body">
-        <h3>post.title</h3>
+        <h3>{post.title}</h3>
         <p>
           {post.body}
         </p>

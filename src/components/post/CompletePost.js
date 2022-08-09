@@ -28,25 +28,18 @@ function CompletePost({ post, onClose }) {
           <img src={img} />
         </div>
       </div>
-      
+
       <div className="body">
         <h3>{post.title}</h3>
         <p>
           {post.body}
         </p>
       </div>
-<<<<<<< HEAD
       <hr></hr>
-      <div style={{ color: 'Orange',  fontWeight:'bolder',paddingLeft:'20px', textAlign: 'center' }}>
-        <span style={{display: 'inline-block', width:'50%',paddingBottom:'1rem'}}>Author: Hadsaw Kakazai</span>
-        <span style={{display: 'inline-block', width:'50%',paddingBottom:'1rem'}}>Email: hadsawkakazaihk@gmail.com</span>
-        
-=======
-      <div style={{ backgroundColor: 'rgb(49, 147, 237)', color: 'white', borderRadius: '10px 10px 10px 10px', fontWeight: 'bolder', paddingLeft: '20px' }}>
-        <span>Author: {post.name}</span>
-        <span>Email: {post.email}</span>
+      <div style={{ color: 'Orange', fontWeight: 'bolder', paddingLeft: '20px', textAlign: 'center' }}>
+        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>Author: {post.name}</span>
+        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>Email: {post.email}</span>
 
->>>>>>> 95e3fb2dec69097cdfc8c3f94e18b384fe94c408
       </div>
     </div>
   )

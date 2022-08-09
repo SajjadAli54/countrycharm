@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
 
-function Header({ buttonPopUp, setButtonPopUp, onCatClick }) {
+function Header({ setButtonPopUp, onCatClick }) {
 
   return (
     <Navbar bg="primary" className='nav-styling' expand="lg">
@@ -30,7 +30,7 @@ function Header({ buttonPopUp, setButtonPopUp, onCatClick }) {
             {/*these two are the links for add a post and search a post i have given the classname as features
             because these two are the features of review site*/}
             <Nav.Link className='features_link' >Add a Post</Nav.Link>
-            <Nav.Link className='features_link' onClick={() => setButtonPopUp(true)}>Search a Post</Nav.Link>
+            <Nav.Link className='features_link' onClick={setButtonPopUp}>Search a Post</Nav.Link>
 
 
           </Nav>

@@ -14,7 +14,7 @@ function CompletePost({ post, onClose }) {
         </div>
         <hr></hr>
         <div className="image_content">
-          <img src={getImage(post.id, post.category)} />
+          <img src={getImage(post.id, post.category)} alt='Category' />
         </div>
       </div>
 

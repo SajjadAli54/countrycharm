@@ -1,14 +1,12 @@
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css'
-import { useState } from 'react';
 
 <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
 
-function Header({ setButtonPopUp, onCatClick }) {
+function Header({ setAddPost, setShowSearch, onCatClick }) {
 
   return (
     <Navbar bg="primary" className='nav-styling' expand="lg">
@@ -29,8 +27,8 @@ function Header({ setButtonPopUp, onCatClick }) {
 
             {/*these two are the links for add a post and search a post i have given the classname as features
             because these two are the features of review site*/}
-            <Nav.Link className='features_link' >Add a Post</Nav.Link>
-            <Nav.Link className='features_link' onClick={setButtonPopUp}>Search a Post</Nav.Link>
+            <Nav.Link className='features_link' onClick={setAddPost} >Add a Post</Nav.Link>
+            <Nav.Link className='features_link' onClick={setShowSearch}>Search a Post</Nav.Link>
 
 
           </Nav>

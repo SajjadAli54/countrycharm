@@ -6,6 +6,8 @@ import Scroll from '../components/Scroll'
 import ErrorBoundry from '../components/ErrorBoundry'
 import { Component } from 'react';
 import array from './posts';
+import SearchPost from '../components/post/SearchPost';
+import AddPost from '../components/post/AddPost'
 
 class App extends Component {
   constructor() {
@@ -13,35 +15,35 @@ class App extends Component {
 
     this.state = {
       posts: array,
-      buttonPopUp: false
+      showSearch: false,
+      showAddPost: false
     }
   }
 
-  setButtonPopUp = () => {
-    this.setState({
-      posts: array,
-      buttonPopUp: true
-    })
+  setShowSearch = () => {
+    this.settingUpState(this.state.posts, !this.state.showSearch, false)
+  }
+
+  setAddPost = () => {
+    this.settingUpState(this.state.posts, false, !this.state.showAddPost)
   }
 
   categorise = event => {
-    let name = event.target.name;
+    let name = event.target.name, content;
     if (name === 'All')
-      this.setState({
-        posts: array,
-        buttonPopUp: false
-      })
+      content = array
     else
-      this.setState({
-        posts: array.filter(element => element.category === name),
-        buttonPopUp: true
-      })
+      content = array.filter(element => element.category === name)
+
+    this.settingUpState(content, false, false)
   }
 
   render() {
     return (
       <div>
-        <Header buttonPopUp={this.state.buttonPopUp} onCatClick={this.categorise} />
+        <Header setShowSearch={this.setShowSearch} setAddPost={this.setAddPost} onCatClick={this.categorise} />
+        <AddPost trigger={this.state.showAddPost} />
+        <SearchPost trigger={this.state.showSearch} />
         <Scroll>
           <ErrorBoundry>
             <PostsList posts={this.state.posts} />
@@ -49,6 +51,14 @@ class App extends Component {
         </Scroll>
       </div>
     );
+  }
+
+  settingUpState = (posts, showSearch, showAddPost) => {
+    this.setState({
+      posts: posts,
+      showSearch: showSearch,
+      showAddPost: showAddPost
+    })
   }
 }
 export default App;

@@ -10,9 +10,9 @@ function SearchPost(props) {
                 <br></br>
                 <label className='lb_category'>Select the Category </label>
                 <select name="category" >
-                    <option value="places">Places</option>
-                    <option value="hotels">Hotels</option>
-                    <option value="foods">Food</option>
+                    <option value="Place">Places</option>
+                    <option value="Hotel">Hotels</option>
+                    <option value="Food">Food</option>
 
                 </select>
 

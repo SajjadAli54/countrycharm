@@ -12,10 +12,28 @@ class App extends Component {
   constructor() {
     super()
 
+    this.allPosts = array
+    this.count = 0
+
+    this.populate()
+
     this.state = {
-      posts: array,
+      posts: this.allPosts,
       showSearch: false,
       showAddPost: false
+    }
+  }
+
+  populate = () => {
+    this.count = localStorage.getItem('count')
+    if (!this.count) {
+      this.count = 0
+      return
+    }
+
+    for (let i = 1; i <= +this.count; i++) {
+      let obj = JSON.parse(localStorage.getItem(i))
+      this.allPosts.unshift(obj)
     }
   }
 
@@ -30,9 +48,9 @@ class App extends Component {
   categorise = event => {
     let name = event.target.name, content;
     if (name === 'All')
-      content = array
+      content = this.allPosts
     else
-      content = array.filter(element => element.category === name)
+      content = this.allPosts.filter(element => element.category === name)
 
     this.settingUpState(content, false, false)
   }
@@ -40,10 +58,10 @@ class App extends Component {
   searchButtonClick = obj => {
     let arr
     if (obj.category === 'All') {
-      arr = array.filter(x => x.country === obj.country && x.city === obj.city)
+      arr = this.allPosts.filter(x => x.country === obj.country && x.city === obj.city)
     }
     else {
-      arr = array.filter(x => x.category === obj.category &&
+      arr = this.allPosts.filter(x => x.category === obj.category &&
         x.country === obj.country &&
         x.city === obj.city)
     }
@@ -52,8 +70,14 @@ class App extends Component {
   }
 
   addButtonClick = obj => {
+    obj.id = 101 + ++this.count
+    this.allPosts = [obj, ...this.allPosts]
+    this.settingUpState(this.allPosts, false, false)
 
+    localStorage.setItem('count', this.count)
+    localStorage.setItem(this.count, JSON.stringify(obj))
   }
+
   render() {
     return (
       <div>
@@ -61,7 +85,7 @@ class App extends Component {
           setShowSearch={this.setShowSearch}
           setAddPost={this.setAddPost}
           onCatClick={this.categorise} />
-        <AddPost trigger={this.state.showAddPost} />
+        <AddPost trigger={this.state.showAddPost} addButtonClick={this.addButtonClick} />
         <SearchPost
           trigger={this.state.showSearch}
           onSearchClick={this.searchButtonClick} />

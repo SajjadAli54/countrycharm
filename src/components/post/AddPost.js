@@ -31,6 +31,18 @@ class AddPost extends Component {
     sessionStorage.setItem(1, JSON.stringify(obj));
   }
 
+  addPost = () => {
+    let obj = {
+      category: document.getElementById('addCategory').value,
+      title: document.getElementById('title').value,
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      body: document.getElementById('desc').value
+    }
+
+    this.props.addButtonClick(obj)
+  }
+
   render() {
     return (this.props.trigger) ?
       (
@@ -63,7 +75,7 @@ class AddPost extends Component {
             <br></br>
             {/* <Form.Control type="file" accept="image/*" />
             <br></br> */}
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={this.addPost}>
               Submit
             </Button>
           </Form>

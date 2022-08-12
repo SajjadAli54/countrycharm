@@ -18,7 +18,7 @@ function SearchPost(props) {
 
             <form>
                 <br></br>
-                <label className='lb_category'>Category </label>
+                <label className='lb_category' for='category'>Category </label>
                 <select id='category' name="category" >
                     <option value="All">All</option>
                     <option value="Place">Place</option>
@@ -30,7 +30,7 @@ function SearchPost(props) {
                 <br></br>
                 <br></br>
 
-                <label className='lb_country'>Country</label>
+                <label className='lb_country' for='country'>Country</label>
                 <select id='country' name="country" >
                     <option value="Places">Country</option>
                     <option value="hotels">Country1</option>
@@ -38,7 +38,7 @@ function SearchPost(props) {
 
                 </select>
 
-                <label className='lb_city'>City</label>
+                <label for='city' className='lb_city'>City</label>
                 <select id='city' name="city" >
                     <option value="Place">Places</option>
                     <option value="Hotel">Hotels</option>

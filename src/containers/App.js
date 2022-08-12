@@ -51,6 +51,9 @@ class App extends Component {
     this.settingUpState(arr, false, false);
   }
 
+  addButtonClick = obj => {
+
+  }
   render() {
     return (
       <div>

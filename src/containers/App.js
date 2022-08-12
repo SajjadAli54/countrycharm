@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from '../components/header/Header';
 import PostsList from '../components/post/PostsList';
@@ -38,12 +37,31 @@ class App extends Component {
     this.settingUpState(content, false, false)
   }
 
+  searchButtonClick = obj => {
+    let arr
+    if (obj.category === 'All') {
+      arr = array.filter(x => x.country === obj.country && x.city === obj.city)
+    }
+    else {
+      arr = array.filter(x => x.category === obj.category &&
+        x.country === obj.country &&
+        x.city === obj.city)
+    }
+
+    this.settingUpState(arr, false, false);
+  }
+
   render() {
     return (
       <div>
-        <Header setShowSearch={this.setShowSearch} setAddPost={this.setAddPost} onCatClick={this.categorise} />
+        <Header
+          setShowSearch={this.setShowSearch}
+          setAddPost={this.setAddPost}
+          onCatClick={this.categorise} />
         <AddPost trigger={this.state.showAddPost} />
-        <SearchPost trigger={this.state.showSearch} />
+        <SearchPost
+          trigger={this.state.showSearch}
+          onSearchClick={this.searchButtonClick} />
         <Scroll>
           <ErrorBoundry>
             <PostsList posts={this.state.posts} />
@@ -61,4 +79,5 @@ class App extends Component {
     })
   }
 }
+
 export default App;

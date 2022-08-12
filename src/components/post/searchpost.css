@@ -47,7 +47,7 @@ select{
     margin-left: 50px;
 }
 
-input[type="submit"]{
+input[type="button"]{
     border: none;
     height: 50px;
     background-color: rgb(0, 154, 250);
@@ -60,7 +60,7 @@ input[type="submit"]{
 }
 
 
-input[type="submit"]:hover{
+input[type="button"]:hover{
     color: rgb(0, 154, 250);
     border:1px solid rgb(0, 154, 250);
     background-color: white;

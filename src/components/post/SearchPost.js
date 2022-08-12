@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './searchpost.css'
 
+import { countries, placeData } from '../../data/Countries'
+
 function SearchPost(props) {
+
+    const [city, setCity] = useState([...placeData['Pakistan'], ...placeData['India']])
+
     function searchClick() {
         let obj = {
             'category': document.getElementById('category').value,
@@ -32,17 +37,17 @@ function SearchPost(props) {
 
                 <label className='lb_country' for='country'>Country</label>
                 <select id='country' name="country" >
-                    <option value="Places">Country</option>
-                    <option value="hotels">Country1</option>
-                    <option value="foods">Country2</option>
+                    {
+                        countries.map((x, i) => <option key={i} value={x}>{x}</option>)
+                    }
 
                 </select>
 
                 <label for='city' className='lb_city'>City</label>
                 <select id='city' name="city" >
-                    <option value="Place">Places</option>
-                    <option value="Hotel">Hotels</option>
-                    <option value="Food">Food</option>
+                    {
+                        city.map((x, i) => <option key={i} value={x}>{x}</option>)
+                    }
 
                 </select>
 

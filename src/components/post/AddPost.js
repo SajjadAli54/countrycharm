@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './searchpost.css'
 
+import { countries, placeData } from '../../data/Countries'
 
 class AddPost extends Component {
   constructor(props) {
@@ -12,6 +13,8 @@ class AddPost extends Component {
     let obj = JSON.parse(sessionStorage.getItem(1))
     this.state = obj ? obj : {
       category: 'All',
+      country: '',
+      city: '',
       title: '',
       name: '',
       email: '',
@@ -23,6 +26,8 @@ class AddPost extends Component {
     let obj = {
       category: document.getElementById('addCategory').value,
       title: document.getElementById('title').value,
+      country: document.getElementById('searchCountry').value,
+      city: document.getElementById('searchCity').value,
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       desc: document.getElementById('desc').value
@@ -34,6 +39,8 @@ class AddPost extends Component {
   addPost = () => {
     let obj = {
       category: document.getElementById('addCategory').value,
+      country: document.getElementById('searchCountry').value,
+      city: document.getElementById('searchCity').value,
       title: document.getElementById('title').value,
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
@@ -63,6 +70,35 @@ class AddPost extends Component {
 
             </select>
             <br></br>
+
+            <label className='lb_category'>Select the Country </label>
+            <select
+              id='searchCountry'
+              onSelect={this.onChangeHappen}
+              defaultValue={this.state.country}
+              name="category" >
+              {
+                countries.map((x, i) => <option key={i} value={x}>{x}</option>)
+              }
+            </select>
+            <br></br>
+
+            <label className='lb_category'>Select the City </label>
+            <select
+              id='searchCity'
+              onSelect={this.onChangeHappen}
+              defaultValue={this.state.city}
+              name="category" >
+              {
+                placeData['Pakistan'].map((x, i) => <option key={i} value={x}>{x}</option>)
+              }
+              {
+                placeData['India'].map((x, i) => <option key={i} value={x}>{x}</option>)
+              }
+
+            </select>
+            <br></br>
+
             <Form.Control id='title' type="text" defaultValue={this.state.title} onChange={this.onChangeHappen} placeholder="Enter Post Title" required={true} />
             <br></br>
             <Form.Control id='name' type="text" defaultValue={this.state.name} onChange={this.onChangeHappen} placeholder="Enter Your Name" />

@@ -33,7 +33,7 @@ class App extends Component {
 
     for (let i = 1; i <= +this.count; i++) {
       let obj = JSON.parse(localStorage.getItem(i))
-      this.allPosts.unshift(obj)
+      this.allPosts = [obj, ...this.allPosts]
     }
   }
 
@@ -70,11 +70,11 @@ class App extends Component {
   }
 
   addButtonClick = obj => {
-    obj.id = 101 + ++this.count
+    obj.id = 101 + this.count
     this.allPosts = [obj, ...this.allPosts]
     this.settingUpState(this.allPosts, false, false)
 
-    localStorage.setItem('count', this.count)
+    localStorage.setItem('count', ++this.count)
     localStorage.setItem(this.count, JSON.stringify(obj))
   }
 

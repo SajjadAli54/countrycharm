@@ -67,7 +67,6 @@ class AddPost extends Component {
               <option value="Place">Place</option>
               <option value="Hotel">Hotel</option>
               <option value="Food">Food</option>
-
             </select>
             <br></br>
 

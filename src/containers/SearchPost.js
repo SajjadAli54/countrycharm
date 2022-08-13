@@ -5,7 +5,7 @@ import { countries, placeData } from '../data/Countries'
 
 function SearchPost(props) {
 
-    const [city, setCity] = useState([...placeData['Pakistan'], ...placeData['India']])
+    const [city] = useState([...placeData['Pakistan'], ...placeData['India']])
 
     function searchClick() {
         let obj = {

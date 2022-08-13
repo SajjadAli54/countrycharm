@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './searchpost.css'
 
-import { countries, placeData } from '../../data/Countries'
+import { countries, placeData } from '../data/Countries'
 
 class AddPost extends Component {
   constructor(props) {

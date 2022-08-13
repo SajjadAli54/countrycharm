@@ -5,8 +5,8 @@ import Scroll from '../components/Scroll'
 import ErrorBoundry from '../components/ErrorBoundry'
 import { Component } from 'react';
 import array from './posts';
-import SearchPost from '../components/post/SearchPost';
-import AddPost from '../components/post/AddPost'
+import SearchPost from './SearchPost';
+import AddPost from './AddPost'
 
 class App extends Component {
   constructor() {

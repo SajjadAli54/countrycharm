@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './searchpost.css'
 
-import { countries, placeData } from '../../data/Countries'
+import { countries, placeData } from '../data/Countries'
 
 function SearchPost(props) {
 

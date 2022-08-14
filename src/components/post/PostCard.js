@@ -37,13 +37,13 @@ function PostCard({ post }) {
             width='100px'
             height={'100px'}
             alt='Post'></img>
-          <h5 style={{ marginTop: '1rem', fontSize: '2rem', textAlign: 'center' }}>
+          <h5 style={{ marginTop: '1rem', fontSize: '1rem', textAlign: 'justify' }}>
             {post.title}
           </h5>
           <Card.Text style={{ height: '10rem' }}>
             {post.body.substring(0, 200)}
           </Card.Text>
-          <Card.Link onClick={handleClick} href="//"><hr></hr>Read More</Card.Link>
+          <Card.Link onClick={handleClick} style={{cursor:"pointer"}}><hr></hr>Read More</Card.Link>
 
         </Card.Body>
       </Card>

@@ -45,7 +45,7 @@
     padding-top: 10px;
     margin-left: 1rem;
     margin-top: 1rem;
-
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,7 +14,12 @@ function CompletePost({ post, onClose }) {
         </div>
         <hr></hr>
         <div className="image_content">
-          <img src={getImage(post.id, post.category)} alt='Category' />
+          <img
+            src={getImage(post.id, post.category)}
+            alt='Category'
+            width='200px'
+            height={'200px'}
+          />
         </div>
       </div>
 
@@ -30,8 +35,8 @@ function CompletePost({ post, onClose }) {
         <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>Email: {post.email}</span>
       </div>
       <div style={{ color: 'Orange', fontWeight: 'bolder', paddingLeft: '20px', textAlign: 'center' }}>
-        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>{post.city}</span>
-        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>{post.country}</span>
+        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>City: {post.city}</span>
+        <span style={{ display: 'inline-block', width: '50%', paddingBottom: '1rem' }}>Country: {post.country}</span>
       </div>
     </div>
   )

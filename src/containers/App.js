@@ -9,6 +9,7 @@ import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import Pagination from "../components/pagination";
 import { paginate } from "../data/paginate";
+import { populate } from "./../data/posts";
 
 class App extends Component {
   state = {
@@ -20,8 +21,9 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.allPosts = array;
-    this.populate();
+    const { allPosts, count } = populate();
+    this.allPosts = allPosts;
+    this.count = count;
 
     this.setState({
       posts: this.allPosts,
@@ -31,19 +33,6 @@ class App extends Component {
       pageSize: 9,
     });
   }
-
-  populate = () => {
-    this.count = localStorage.getItem("count");
-    if (!this.count) {
-      this.count = 0;
-      return;
-    }
-
-    for (let i = 1; i <= +this.count; i++) {
-      let obj = JSON.parse(localStorage.getItem(i));
-      this.allPosts = [obj, ...this.allPosts];
-    }
-  };
 
   handleShowSearch = () => {
     this.setState({

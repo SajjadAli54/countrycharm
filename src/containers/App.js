@@ -8,7 +8,7 @@ import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import Pagination from "../components/pagination";
 import { paginate } from "../data/paginate";
-import { getFiltered, populate } from "./../data/posts";
+import { getFiltered, populate, getDeepFiltered } from "./../data/posts";
 
 class App extends Component {
   state = {
@@ -55,22 +55,10 @@ class App extends Component {
   };
 
   handleSearch = (obj) => {
-    let arr;
-    if (obj.category === "All") {
-      arr = this.allPosts.filter(
-        (x) => x.country === obj.country && x.city === obj.city
-      );
-    } else {
-      arr = this.allPosts.filter(
-        (x) =>
-          x.category === obj.category &&
-          x.country === obj.country &&
-          x.city === obj.city
-      );
-    }
-
     this.setState({
-      posts: arr,
+      posts: getDeepFiltered(obj),
+      currentPage: 1,
+      showSearch: false,
     });
   };
 

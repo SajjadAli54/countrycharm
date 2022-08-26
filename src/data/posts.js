@@ -1128,3 +1128,16 @@ export const getFiltered = (category) => {
   if (category === "All") return arr;
   else return arr.filter((element) => element.category === category);
 };
+
+export const getDeepFiltered = (obj) => {
+  if (obj.category === "All") {
+    return arr.filter((x) => x.country === obj.country && x.city === obj.city);
+  } else {
+    return arr.filter(
+      (x) =>
+        x.category === obj.category &&
+        x.country === obj.country &&
+        x.city === obj.city
+    );
+  }
+};

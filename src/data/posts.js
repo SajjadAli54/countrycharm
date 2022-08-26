@@ -1141,3 +1141,14 @@ export const getDeepFiltered = (obj) => {
     );
   }
 };
+
+export const addPost = (post) => {
+  post.id = arr.length + 1;
+  arr = [post, ...arr];
+
+  let count = arr.length - 100;
+  localStorage.setItem("count", count);
+  localStorage.setItem(count, JSON.stringify(post));
+
+  return arr;
+};

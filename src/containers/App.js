@@ -8,7 +8,12 @@ import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import Pagination from "../components/pagination";
 import { paginate } from "../data/paginate";
-import { getFiltered, populate, getDeepFiltered } from "./../data/posts";
+import {
+  getFiltered,
+  populate,
+  getDeepFiltered,
+  addPost,
+} from "./../data/posts";
 
 class App extends Component {
   state = {
@@ -63,12 +68,7 @@ class App extends Component {
   };
 
   handleAdd = (obj) => {
-    obj.id = 101 + this.count;
-    this.allPosts = [obj, ...this.allPosts];
-    this.setState({ posts: this.allPosts });
-
-    localStorage.setItem("count", ++this.count);
-    localStorage.setItem(this.count, JSON.stringify(obj));
+    this.setState({ posts: addPost(obj), showAddPost: false });
   };
 
   handlePageChange = (page) => {

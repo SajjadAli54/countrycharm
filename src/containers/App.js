@@ -11,21 +11,25 @@ import Pagination from "../components/pagination";
 import { paginate } from "../data/paginate";
 
 class App extends Component {
-  constructor() {
-    super();
+  state = {
+    posts: [],
+    showSearch: false,
+    showAddPost: false,
+    currentPage: 1,
+    pageSize: 9,
+  };
 
+  componentDidMount() {
     this.allPosts = array;
-    this.count = 0;
-
     this.populate();
 
-    this.state = {
+    this.setState({
       posts: this.allPosts,
       showSearch: false,
       showAddPost: false,
       currentPage: 1,
       pageSize: 9,
-    };
+    });
   }
 
   populate = () => {
@@ -41,24 +45,32 @@ class App extends Component {
     }
   };
 
-  setShowSearch = () => {
-    this.settingUpState(this.state.posts, !this.state.showSearch, false);
+  handleShowSearch = () => {
+    this.setState({
+      showSearch: !this.state.showSearch,
+      showAddPost: false,
+    });
   };
 
-  setAddPost = () => {
-    this.settingUpState(this.state.posts, false, !this.state.showAddPost);
+  handleAddPost = () => {
+    this.setState({
+      showSearch: false,
+      showAddPost: !this.state.showAddPost,
+    });
   };
 
-  categorise = (event) => {
+  handleOnItemSelect = (event) => {
     let name = event.target.name,
       content;
     if (name === "All") content = this.allPosts;
     else content = this.allPosts.filter((element) => element.category === name);
 
-    this.settingUpState(content, false, false);
+    this.setState({
+      posts: content,
+    });
   };
 
-  searchButtonClick = (obj) => {
+  handleSearch = (obj) => {
     let arr;
     if (obj.category === "All") {
       arr = this.allPosts.filter(
@@ -73,13 +85,15 @@ class App extends Component {
       );
     }
 
-    this.settingUpState(arr, false, false);
+    this.setState({
+      posts: arr,
+    });
   };
 
-  addButtonClick = (obj) => {
+  handleAdd = (obj) => {
     obj.id = 101 + this.count;
     this.allPosts = [obj, ...this.allPosts];
-    this.settingUpState(this.allPosts, false, false);
+    this.setState({ posts: this.allPosts });
 
     localStorage.setItem("count", ++this.count);
     localStorage.setItem(this.count, JSON.stringify(obj));
@@ -97,17 +111,17 @@ class App extends Component {
     return (
       <div>
         <Header
-          setShowSearch={this.setShowSearch}
-          setAddPost={this.setAddPost}
-          onCatClick={this.categorise}
+          setShowSearch={this.handleShowSearch}
+          setAddPost={this.handleAddPost}
+          onCatClick={this.handleOnItemSelect}
         />
         <AddPost
           trigger={this.state.showAddPost}
-          addButtonClick={this.addButtonClick}
+          addButtonClick={this.handleAdd}
         />
         <SearchPost
           trigger={this.state.showSearch}
-          onSearchClick={this.searchButtonClick}
+          onSearchClick={this.handleSearch}
         />
         <Scroll>
           <ErrorBoundry>
@@ -123,14 +137,6 @@ class App extends Component {
       </div>
     );
   }
-
-  settingUpState = (posts, showSearch, showAddPost) => {
-    this.setState({
-      posts: posts,
-      showSearch: showSearch,
-      showAddPost: showAddPost,
-    });
-  };
 }
 
 export default App;

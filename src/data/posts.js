@@ -1124,4 +1124,7 @@ export const populate = () => {
   };
 };
 
-export default arr;
+export const getFiltered = (category) => {
+  if (category === "All") return arr;
+  else return arr.filter((element) => element.category === category);
+};

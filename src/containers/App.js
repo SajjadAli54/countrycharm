@@ -8,7 +8,7 @@ import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import Pagination from "../components/pagination";
 import { paginate } from "../data/paginate";
-import { populate } from "./../data/posts";
+import { getFiltered, populate } from "./../data/posts";
 
 class App extends Component {
   state = {
@@ -48,13 +48,9 @@ class App extends Component {
   };
 
   handleOnItemSelect = (event) => {
-    let name = event.target.name,
-      content;
-    if (name === "All") content = this.allPosts;
-    else content = this.allPosts.filter((element) => element.category === name);
-
     this.setState({
-      posts: content,
+      posts: getFiltered(event.target.name),
+      currentPage: 1,
     });
   };
 

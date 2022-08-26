@@ -1,4 +1,4 @@
-const arr = [
+let arr = [
   {
     userId: 1,
     id: 1,
@@ -1111,16 +1111,15 @@ const arr = [
 
 export const populate = () => {
   let count = localStorage.getItem("count");
-  let data = [...arr];
   if (count) {
     for (let i = 1; i <= +count; i++) {
       let obj = JSON.parse(localStorage.getItem(i));
-      data = [obj, ...arr];
+      arr = [obj, ...arr];
     }
   }
 
   return {
-    allPosts: data,
+    allPosts: arr,
     count: count ? count : 0,
   };
 };

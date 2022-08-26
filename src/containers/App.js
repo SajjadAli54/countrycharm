@@ -4,7 +4,6 @@ import PostsList from "../components/post/PostsList";
 import Scroll from "../components/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry";
 import { Component } from "react";
-import array from "./posts";
 import SearchPost from "./SearchPost";
 import AddPost from "./AddPost";
 import Pagination from "../components/pagination";

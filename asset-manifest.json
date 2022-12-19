@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/countrycharm/static/css/main.efea1650.css",
+    "main.js": "/countrycharm/static/js/main.f829cfb8.js",
+    "static/js/787.f055211e.chunk.js": "/countrycharm/static/js/787.f055211e.chunk.js",
+    "index.html": "/countrycharm/index.html",
+    "main.efea1650.css.map": "/countrycharm/static/css/main.efea1650.css.map",
+    "main.f829cfb8.js.map": "/countrycharm/static/js/main.f829cfb8.js.map",
+    "787.f055211e.chunk.js.map": "/countrycharm/static/js/787.f055211e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efea1650.css",
+    "static/js/main.f829cfb8.js"
+  ]
+}
